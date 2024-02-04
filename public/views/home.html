@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benvenuto sulla Pagina di Home</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      p {
+        color: #777;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Benvenuto sulla Pagina di Home</h1>
+      <p>
+        Questa è la tua pagina principale. Puoi iniziare navigando attraverso i
+        contenuti disponibili.
+      </p>
+    </div>
+    <script>
+      let ws = new WebSocket(location.origin.replace(/^http/, "ws"));
+      ws.onmessage = (e) => {
+        console.log(e.data);
+      };
+    </script>
+  </body>
+</html>
